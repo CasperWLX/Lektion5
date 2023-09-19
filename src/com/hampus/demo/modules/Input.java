@@ -15,4 +15,8 @@ public class Input
     {
         return sc.nextInt();
     }
+    public void clearBuffer()
+    {
+        sc.nextLine();
+    }
 }

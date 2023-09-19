@@ -18,6 +18,7 @@ public class Main
         {
             System.out.println("Loop " + i);
         }
+        userinput.clearBuffer();
 
         boolean loopIsRunning = true;
         String randomString;
@@ -25,10 +26,16 @@ public class Main
         {
             System.out.println("Type anything!");
             randomString = userinput.getStringInput();
-            System.out.println(randomString);
-            if(randomString.equals("stop"))
+            switch(randomString)
             {
-                loopIsRunning = false;
+                case "Stop":
+                    loopIsRunning = false;
+                    break;
+                case "1":
+                    System.out.println("Throwing!");
+                    break;
+                default:
+                    System.out.println("Wrong input");
             }
         } while(loopIsRunning);
     }
