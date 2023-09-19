@@ -18,5 +18,11 @@ public class Main
         {
             System.out.println("Loop " + i);
         }
+
+        do
+        {
+            System.out.println("Type anything!");
+            System.out.println(userinput.getStringInput());
+        }while(true);
     }
 }
