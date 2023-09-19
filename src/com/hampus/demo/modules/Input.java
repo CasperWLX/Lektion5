@@ -13,7 +13,20 @@ public class Input
 
     public int getIntInput()
     {
-        return sc.nextInt();
+        int number = Integer.MAX_VALUE;
+        while(number == Integer.MAX_VALUE)
+        {
+            if(sc.hasNextInt())
+            {
+                number = sc.nextInt();
+            }
+            else
+            {
+                System.out.println("Please only enter a number");
+            }
+            clearBuffer();
+        }
+        return number;
     }
     public void clearBuffer()
     {
