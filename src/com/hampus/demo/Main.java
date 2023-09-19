@@ -19,10 +19,17 @@ public class Main
             System.out.println("Loop " + i);
         }
 
+        boolean loopIsRunning = true;
+        String randomString;
         do
         {
             System.out.println("Type anything!");
-            System.out.println(userinput.getStringInput());
-        }while(true);
+            randomString = userinput.getStringInput();
+            System.out.println(randomString);
+            if(randomString.equals("stop"))
+            {
+                loopIsRunning = false;
+            }
+        } while(loopIsRunning);
     }
 }
